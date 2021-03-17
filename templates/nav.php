@@ -14,7 +14,7 @@
         <!-- MENU LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-nav-first">
-                    <li class="active"><a href=".">Home</a></li>
+                    <li class="<?= (strpos($_SERVER['REQUEST_URI'],'home')>0) ? 'active' : null ?>"><a href=".">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Peso Gensan<span class="caret"></span></a>
                         
@@ -66,7 +66,8 @@
                             
                         </ul>
                     </li>
-                    
+                    <li class="<?= (strpos($_SERVER['REQUEST_URI'],'register')>0) ? 'active' : null ?>"><a href="register.php"><b>Sign Up</b></a></li>
+                    <li class="<?= (strpos($_SERVER['REQUEST_URI'],'login')>0) ? 'active' : null ?>"><a href="login.php"><b>Log In</b></a></li>
                 
             </ul>
         </div>

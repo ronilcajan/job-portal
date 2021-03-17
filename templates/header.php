@@ -11,3 +11,7 @@
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" type="images/png" sizes="180x180" href="admin/assets/images/peso.png">
+
+<link rel="stylesheet" href="admin/assets/plugins/toastr/toastr.min.css">
+
+<link rel="stylesheet" href="assets/css/custom.css">
