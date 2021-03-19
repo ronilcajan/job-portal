@@ -6,3 +6,211 @@
     z-index: 2;
     cursor:pointer;
 }
+
+.jobseeker-top-blue{
+    height: 220px;
+    margin-bottom: -126px;
+}
+
+.img-upload-wrapper{
+    position: relative;
+    width: 210px;
+    height: 210px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+.user-profile{
+    position: relative;
+    border-radius: 50% !important;
+    width: 186px;
+    height: 186px;
+    border: 3px solid #468EE5;
+    margin: 0 auto 20px auto;
+}
+
+.user-profile .overlay {
+    border-radius: 50% !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 180px;
+    height: 180px;
+    opacity: 0;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.user-profile div {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+.user-profile a {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    font: normal normal normal 1em/1 "Nucleo";
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.user-profile i {
+    margin-bottom: 4px;
+}
+
+.user-profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.user-profile .overlay:hover{
+    opacity:0.8;
+    background-color:rgba(0, 0, 0, 0.7)
+}
+
+
+.card-worker .card-worker-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+.jobseeker-name {
+    color: #024570;
+    text-align: center;
+}
+.fs-24 {
+    font-size: 20px !important;
+}
+.card-worker .card-worker-jobtitle {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.card-worker .card-worker-dl {
+    margin-bottom: 16px;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.card-worker .card-worker-dl dt {
+    font-size: 12px;
+    font-weight: 600;
+    color: #7c7c7c;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.profile-btn.btn-primary {
+    border-color: #327ab6;
+    color: #327ab6;
+}
+
+.profile-btn {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 10px 20px;
+    transition: 0.5s;
+    width: 80%;
+}
+.profile-btn.btn-primary:hover {
+    border-color: #327ab6;
+    color: #ffffff;
+    background: #327ab6;
+}
+.profile-btn.btn-primary:focus {
+    border-color: #327ab6;
+    color: #ffffff;
+    background: #327ab6;
+}
+.card-worker .card-worker-dl dd {
+    font-size: 14px;
+    color: #464646;
+    margin-bottom: 0;
+}
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+.card-worker-dl-primary {
+    color: #337ab7;
+}
+.fs-12{
+    font-size: 12px !important;
+}
+.fs-12{
+    font-size: 16px !important;
+}
+.badge{
+    background-color:#18a35f;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+@media (min-width: 992px){
+    .fs-24 {
+        font-size: 24px !important;
+    }
+}
+@media (min-width: 992px){
+    .card-worker .card-worker-jobtitle {
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (min-width: 768px){
+    .jobseeker-name {
+        color: #FFF;
+        text-align: left;
+    }
+}
+@media (min-width: 768px){
+    .card-worker .card-worker-jobtitle {
+        font-size: 16px;
+    }    
+}
+
+@media (min-width: 768px){
+    .text-md-left {
+        text-align: left!important;
+    }
+}

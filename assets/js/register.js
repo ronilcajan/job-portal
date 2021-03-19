@@ -3,11 +3,15 @@ $(document).ready(function(){
         var role = $(this).val();
         
         if(role=='worker'){
-            $('#employer').hide();
-            $('#worker').show();
+            $('.employer').hide();
+            $('.worker').show();
+            $('#name-form').attr('placeholder','Enter your name');
+            $('#lname').text('Full Name');
         }else{
-            $('#worker').hide();
-            $('#employer').show();
+            $('.worker').hide();
+            $('.employer').show();
+            $('#name-form').attr('placeholder','Enter company name');
+            $('#lname').text('Company Name');
         }
     });
 
@@ -20,7 +24,7 @@ $(document).ready(function(){
 
         var validaDate = validateEmail(email);
         if(name.trim() == ''){
-            toastr.warning("Please enter your fullname!");
+            toastr.warning("Please enter fullname/company name!");
             $('#name-form').focus();
 
         }else if(email.trim() == '' || !validaDate){

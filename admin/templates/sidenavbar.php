@@ -197,7 +197,61 @@
                     </ul>
                 </li>
                 <?php endif ?>
-               
+
+                <?php if(strpos($_SERVER['REQUEST_URI'],'registration')>0):?>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Registrations
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: block;">
+                        <small>
+                        <li class="nav-item">
+                            <a href="new_worker.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Applicants</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="new_employers.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Employers</p>
+                            </a>
+                        </li>
+                    </small>    
+                    </ul>
+                </li>
+                <?php else: ?>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                        Registrations
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <small>
+                        <li class="nav-item">
+                            <a href="../registration/new_worker.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Applicants</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../registration/new_employers.php" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Employers</p>
+                            </a>
+                        </li>
+                    </small>    
+                    </ul>
+                </li>
+                <?php endif ?>
+
                 <li class="nav-header">SYSTEM</li>
                 <?php if(strpos($_SERVER['REQUEST_URI'],'users')>0):?>
                 <li class="nav-item">

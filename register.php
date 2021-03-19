@@ -8,17 +8,26 @@
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
-     <!-- PRE LOADER -->
+     <!-- PRE LOADER -->    
      <?php include 'templates/preloader.php' ?>
      <!-- MENU -->
      <?php include 'templates/nav.php' ?>
-
     <section id="testimonial" class="section-background">
         <div class="container">
-            <div class="row">
 
+            <div class="row">
                 <div class="col-sm-7 col-xs-12">
                     <div class="item">
+                        <?php if(isset($_SESSION['message'])): ?>
+                            <div class="alert alert-<?php echo $_SESSION['success']; ?> alert-dismissible show" role="alert">
+                                <?php echo $_SESSION['message']; ?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <?php unset($_SESSION['message']); ?>
+                        <?php endif ?>
+
                         <form id="contact-form" role="form" method="post">
                             <div class="col-md-12 col-sm-12">
                                 <label>Please Select</label>
@@ -26,7 +35,7 @@
                                     <option value="worker">I'm a Worker</option>
                                     <option value="employer">I'm an Employer</option>
                                 </select>
-                                <label>Full Name</label></label>
+                                <label id="lname">Full Name</label>
                                 <input type="text" class="form-control" placeholder="Enter your name" required id="name-form">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control" placeholder="Enter email address" required id="email-form">
@@ -46,7 +55,7 @@
                 </div>
 
                 <div class="col-sm-5 col-xs-12">
-                    <div class="item" id="worker">
+                    <div class="item worker">
                         <img src="assets/images/jobseeker-signup-img.png" class="img-responsive" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex assumenda culpa animi aspernatur provident at inventore aperiam itaque esse impedit.</p>
                         <div class="tst-rating">
@@ -54,7 +63,7 @@
                                    <i class="fa fa-star"></i> 100% Free <br>
                               </div>
                     </div>
-                    <div class="item" id="employer" style="display:none;">
+                    <div class="item employer" style="display:none;">
                         <img src="assets/images/employer-signup-img.png" class="img-responsive" alt="">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex assumenda culpa animi aspernatur provident at inventore aperiam itaque esse impedit.</p>
                         <div class="tst-rating">
@@ -79,7 +88,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form  role="form" action="" method="post">
+            <form  role="form" action="model/register.php" method="post" enctype="multipart/form-data">
             <div class="modal-body">
                 <div id="worker-req" class="bs-example" data-example-id="responsive-embed-16by9-iframe-youtube">
                     <div class="embed-responsive embed-responsive-4by3">
@@ -94,23 +103,19 @@
                 <div id="employer-req" style="display:none">
                     <div class="form-group">
                         <label>Accomplished SRS Form</label>
-                        <input type="file" class="form-control" name="srs_form">
+                        <input type="file" class="form-control" name="srs_form" accept="image/*,.doc, .docx,.txt,.pdf">
                     </div>
                     <div class="form-group">
                         <label>Latest Business Permit</label>
-                        <input type="file" class="form-control" name="permit">
+                        <input type="file" class="form-control" name="permit" accept="image/*,.doc, .docx,.txt,.pdf">
                     </div>
                     <div class="form-group">
                         <label>BIR Form #2303</label>
-                        <input type="file" class="form-control" name="bir_form">
+                        <input type="file" class="form-control" name="bir_form" accept="image/*,.doc, .docx,.txt,.pdf">
                     </div>
                     <div class="form-group">
                         <label>Company Profile</label>
-                        <input type="file" class="form-control" name="company_profile">
-                    </div>
-                    <div class="form-group">
-                        <label>Dole Certification(In compliance to D.O 174)</label>
-                        <input type="file" class="form-control" name="dole_cert">
+                        <input type="file" class="form-control" name="company_profile" accept="image/*,.doc, .docx,.txt,.pdf">
                     </div>
                 </div>
                 <input type="hidden" name="role" id="user">
